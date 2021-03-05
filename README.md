@@ -1,0 +1,2 @@
+# proj2_shon_cortes
+After user provides input for start and goal coordinates, a Breadth First Search (BFS) algorithm explores the map to find a path to the goal.     The program opens a window that shows the map being explored. The white space represents the open map area, any black space represents an obstacel.      As the program runs, the explored space highlights green. Once a path to the goal is found, the path is highlighted in red.
