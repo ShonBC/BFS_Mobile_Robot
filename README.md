@@ -3,6 +3,7 @@ Project 2 - Point Robot BFS using Polygon Obstacle Space
 Shon Cortes
 
 Packages Used:
+
 	1. import numpy
     2. import copy
 		- Used to do deep copy of lists
@@ -10,6 +11,7 @@ Packages Used:
         - Used for visualization of the path planning.
 
 Run the program:
+
 	1. Run the program using your prefered method (terminal...)
 
     2. Program asks for user input for the start and goal coordinates. 
