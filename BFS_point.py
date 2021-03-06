@@ -1,8 +1,25 @@
+# ENPM 661 - Planning for Autonomous Robots: 
+# Project 2 - Point Robot BFS using Polygon Obstacle Space
+# Shon Cortes
+
 import numpy as np
 import copy
 import cv2
 
 map = 255*np.ones([301, 401, 3], dtype = np.uint8)
+
+# def obstacles_chk_test(node): # Check if position is in TEST MAP obstacle space.
+#
+#     # Square
+#     if node[0]>=90 and node[0]<= 110 and node[1]>=40 and node[1]<=60:
+#         return True
+#
+#     # Circle
+#     if (node[0]-160)**2+(node[1]-50)**2 <= 15**2:
+#         return True
+#
+#     else:
+#         return False
 
 def obstacles_chk(node): # Check if position is in obstacle space.
    
@@ -34,19 +51,6 @@ def obstacles_chk(node): # Check if position is in obstacle space.
  
     else:
         return False
-
-# def obstacles_chk_test(node): # Check if position is in TEST MAP obstacle space.
-#
-#     # Square
-#     if node[0]>=90 and node[0]<= 110 and node[1]>=40 and node[1]<=60:
-#         return True
-#
-#     # Circle
-#     if (node[0]-160)**2+(node[1]-50)**2 <= 15**2:
-#         return True
-#
-#     else:
-#         return False
 
 def move_up(node): # Move point_bot up. Takes current node state.
     x_1 = node[0]
@@ -211,7 +215,6 @@ def BFS(start_node): # Bredth First Search Path Planning
     except ValueError:
         print("Goal not found :[")   
              
-
 def backtrack(parent_nodes): # Backtrack a path from goal to start position.
 
     path = []
@@ -260,7 +263,7 @@ def visualize_BFS(node):
         map[point[1]][point[0]] = [0, 255, 0]
 
 def visualize_path(node): 
-    
+
     while len(node) != 0:
         point = node.pop()
         map[point[1]][point[0]] = [0, 0, 255]
@@ -299,9 +302,3 @@ if __name__ == "__main__":
     # cv2.imshow("Map", map)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-
-
-
-    # print("start pos: " + str(start_node[0]) + ',' + str(start_node[1]))
-    # print("goal pos: " + str(goal_node[0]) + ',' + str(goal_node[1]))
-    # print(path)

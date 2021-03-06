@@ -1,5 +1,7 @@
 ENPM 661 - Planning for Autonomous Robots: 
+
 Project 2 - Point Robot BFS using Polygon Obstacle Space
+
 Shon Cortes
 
 Packages Used:
